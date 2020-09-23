@@ -8,6 +8,5 @@ RUN apk --update add --no-cache g++ git curl make gcc zlib-dev nano py3-pip
 
 RUN mkdir -p /opt/pdc \
 	&& git clone https://github.com/the-leaf/newpdc.git /opt/pdc \
-	&& cd /opt/pdc
-
-RUN pip install -r request.txt
+	&& cd /opt/pdc \
+	&& pip install -r request.txt
