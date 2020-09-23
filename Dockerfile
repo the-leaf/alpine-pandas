@@ -1,7 +1,13 @@
 FROM python:3.8.5-alpine3.12
 
-LABEL maintainer="nickgryg@gmail.com"
+LABEL maintainer="tkp2147.abyss@gmail.com>"
 
-RUN apk --update add --no-cache g++
+RUN apk upgrade
+
+RUN apk --update add --no-cache g++ git curl make gcc zlib-dev nano py3-pip
+
+RUN mkdir -p /opt/pdc \
+	&& git clone https://github.com/the-leaf/newpdc.git /opt/pdc \
+	&& cd /opt/pdc
 
 RUN pip install pandas
