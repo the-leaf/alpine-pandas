@@ -10,4 +10,4 @@ RUN mkdir -p /opt/pdc \
 	&& git clone https://github.com/the-leaf/newpdc.git /opt/pdc \
 	&& cd /opt/pdc
 
-RUN pip install pandas
+RUN pip install -r request.txt
