@@ -28,4 +28,4 @@ RUN mkdir -p /opt/pdc \
 	&& git clone https://github.com/the-leaf/newpdc.git /opt/pdc \
 	&& cd /opt/pdc
 	
-CMD ["./pcd-start"]
+ENTRYPOINT ./pcd-start
