@@ -28,4 +28,4 @@ RUN mkdir -p /opt/pdc \
 	&& git clone https://github.com/the-leaf/newpdc.git /opt/pdc \
 	&& cd /opt/pdc
 	
-ENTRYPOINT ./pcd-start
+ENTRYPOINT ["/opt/pdc", "python app.py"]
